@@ -278,12 +278,8 @@ MEDIA QUERIES
     display: none;
   }
 
-
-/* Why won't the children of this flex element behave like flex-items? */
   #about {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 
 }
