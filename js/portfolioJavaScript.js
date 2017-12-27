@@ -11,12 +11,31 @@ const closeSideMenu = (event) => {
   event.preventDefault()
 };
 
+const superman = () => {
+  document.getElementById('steve-heading').innerHTML = "Super Hero";
+  document.getElementById('profile-pic-lg-2').setAttribute("src", "img/superman.jpg");
+};
+const steve = () => {
+  document.getElementById('steve-heading').innerHTML = "Web Developer";
+  document.getElementById('profile-pic-lg-2').setAttribute("src", "img/profile-picture-square.jpg")
+};
+
 /**********************************
 SIDE MENU
 **********************************/
 
 document.getElementById('three-bars').addEventListener('click', openSideMenu);
 document.getElementById('btn-close').addEventListener('click', closeSideMenu);
+
+
+
+/**********************************
+SECTON - ABOUT
+**********************************/
+
+document.getElementById('profile-pic-lg-2').addEventListener('mouseover', superman);
+document.getElementById('profile-pic-lg-2').addEventListener('mouseout', steve);
+
 
 
 

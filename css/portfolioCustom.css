@@ -16,6 +16,15 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
 .container {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -163,6 +172,8 @@ HEADER
   border-radius: 10px;
 }
 
+
+
 /**********************************
 MOBILE HEADER
 ***********************************/
@@ -172,7 +183,7 @@ MOBILE HEADER
   text-align: center;
 }
 
-#mobile-header img {
+.profile-pic {
   border: 5px  solid #8b4513;
   border-radius: 50%;
 }
@@ -180,8 +191,6 @@ MOBILE HEADER
 /**********************************
 ABOUT
 ***********************************/
-
-
 
 
 /**********************************
@@ -278,24 +287,33 @@ MEDIA QUERIES
     display: none;
   }
 
-  #about {
-    display: flex;
-  }
+} /* End min-width: 568px  */
 
-}
+@media (max-width: 960px) {
+  #profile-pic-lg {
+    display: none;
+  }
+} /* End max-width: 568px  */
 
 @media(min-width: 960px) {
   .container {
     padding-left: 3rem;
     padding-right: 3rem;
   }
-}
 
-@media(max-width: 1024px) {
-  /* .v-header,
-  .fullscreen-video-wrap,
-  .header-overlay
-   {
-    height: 40vh;
-  } */
-}
+  #about {
+    display: flex;
+    justify-content: space-between;
+    margin:auto;
+  }
+
+  #profile-pic-lg {
+    margin: 10px 2.5%;
+    align-self: center;
+  }
+
+  #hi,
+  #wdip {
+    flex: 1;
+  }
+} /* End min-width: 960px  */
