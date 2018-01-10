@@ -26,13 +26,30 @@ h3 {
 }
 
 .container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+  min-width: 100%;
   margin: auto;
 }
 
 .section div h1 {
   text-align: center;
+}
+
+.btn {
+  background: #34b3a0;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.section-titles {
+  color: #868e96;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 
@@ -42,7 +59,7 @@ NAVBAR
 ***********************************/
 
 .navbar {
-  background-color: #3b5998;
+  background-color: #225470;
   overflow: hidden;
   height: 63px;
   position:fixed;
@@ -51,14 +68,19 @@ NAVBAR
   width: 100%;
 }
 
+.navbar-nav {
+  flex-direction: row;
+}
+
 .navbar a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #fff;
+  opacity: .5;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .navbar ul {
@@ -67,8 +89,9 @@ NAVBAR
 }
 
 .navbar a:hover {
-  background-color: #ddd;
-  color: #000;
+  transition-duration: 1s;
+  color: #34b3a0;
+  opacity: 1;
 }
 
 .side-nav {
@@ -163,15 +186,6 @@ HEADER
   padding-bottom: 2rem;
 }
 
-.btn {
-  background: #34b3a0;
-  color: #fff;
-  font-size: 1.2rem;
-  padding: 1rem;
-  text-decoration: none;
-  border-radius: 10px;
-}
-
 
 
 /**********************************
@@ -183,23 +197,70 @@ MOBILE HEADER
   text-align: center;
 }
 
+
+
+/**********************************
+ABOUT
+***********************************/
+
 .profile-pic {
   border: 5px  solid #8b4513;
   border-radius: 50%;
 }
 
 /**********************************
-ABOUT
-***********************************/
-
-
-/**********************************
 WORK
 ***********************************/
 
 #work {
-  background: #333;
   color: #fff;
+}
+
+
+.work-photo {
+  position: relative;
+  line-height: 0;
+  margin-bottom: 2em;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.work-photo img {
+  width: 100%;
+}
+
+.photo-overlay {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0, .65);
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.5s;
+}
+
+.work-button {
+  width: 70%;
+  font-weight: 700;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.photo-overlay:hover {
+  opacity: 1;
 }
 
 
@@ -208,6 +269,63 @@ WORK
 SKILLS
 ***********************************/
 
+#skills {
+  margin-bottom: 3rem;
+}
+
+#skills h3 {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#skills-subtitle {
+  text-align: center;
+  color: #868e96;
+}
+
+.progress {
+  display: flex;
+  height: 1rem;
+  overflow: hidden;
+  font-size: 0.75rem;
+  background-color: #e9ecef;
+  border-radius: 0.25rem;
+}
+
+.progress-bar {
+  transition-duration: 2s;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255,255,255,.15) 0px,
+    rgba(255,255,255,.15) 20px
+    );
+}
+
+#htmlBar {
+  background-color: #28a745;
+}
+
+#cssBar {
+  background-color: #17a2b8;
+}
+
+#javascriptBar {
+  background-color: #dc3545;
+}
+
+#communicationBar {
+  background-color: #ffb722;
+}
+
+#cooperationBar {
+  background-color: #d449d8;
+}
+
+#organizationBar {
+  background-color: #e8a5cc;
+}
 
 
 
@@ -275,12 +393,23 @@ MEDIA QUERIES
 }
 
 @media(min-width: 568px) {
+
+  .navbar {
+    /* background: none; */
+  }
+
   .open-slide {
     display: none;
   }
 
   .v-header {
     display:flex;
+    margin-top: 0;
+  }
+
+  .fullscreen-video-wrap,
+  .header-overlay {
+    top: 0;
   }
 
   #mobile-header {
@@ -288,6 +417,13 @@ MEDIA QUERIES
   }
 
 } /* End min-width: 568px  */
+
+@media (min-width: 768px) {
+  .work-section-container {
+    display: flex;
+    justify-content: space-between;
+  }
+} /* End min-width: 768px */
 
 @media (max-width: 960px) {
   #profile-pic-lg {
@@ -307,13 +443,15 @@ MEDIA QUERIES
     margin:auto;
   }
 
-  #profile-pic-lg {
-    margin: 10px 2.5%;
-    align-self: center;
-  }
-
   #hi,
   #wdip {
+    flex: 2;
+  }
+
+  #profile-pic-lg {
+    margin: 0 2.5%;
+    align-self: flex-start;
     flex: 1;
   }
+
 } /* End min-width: 960px  */
