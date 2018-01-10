@@ -20,6 +20,8 @@ const steve = () => {
   document.getElementById('profile-pic-lg-2').setAttribute("src", "img/profile-picture-square.jpg")
 };
 
+const progressbar = document.getElementsByClassName('progress-bar');
+
 /**********************************
 SIDE MENU
 **********************************/
@@ -42,11 +44,11 @@ document.getElementById('profile-pic-lg-2').addEventListener('mouseout', steve);
 /**********************************
 PROGESS BARS
 **********************************/
-/*
-const progressbar = document.getElementsByClassName('progress-bar');
+
+
 
 for (i = 0; i < progressbar.length; i += 1) {
-  skills.addEventListener('mouseover', () => {
+  skillsBars.addEventListener('mouseover', () => {
     progressbar[0].style.width = "80%";
     progressbar[0].innerHTML = "80%";
     progressbar[1].style.width = "75%";
@@ -61,4 +63,3 @@ for (i = 0; i < progressbar.length; i += 1) {
     progressbar[5].innerHTML = "90%";
   })
 }
-*/

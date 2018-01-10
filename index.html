@@ -36,62 +36,64 @@
     <!-- Custom Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Barlow" rel="stylesheet">
 
+    <!-- Bootstrap cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
     <!-- My custom CSS -->
     <link rel="stylesheet" href="css/portfolioCustom.css">
 
   </head>
   <body>
 
+    <!-- navbar -->
+    <nav class="navbar">
+      <span class="open-slide">
+        <a id="three-bars" href="#">
+          <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+        </svg>
+        </a>
+      </span>
+
+      <ul class="navbar-nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav> <!-- /navbar -->
+
+    <!-- side-menu -->
+    <div id="side-menu" class="side-nav">
+      <a id="btn-close" href="#">&times;</a>
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div> <!-- /side-menu -->
+
+    <header class="v-header">
+      <div class="fullscreen-video-wrap">
+        <video src="laptop-video.mov" autoplay="true" loop="true"></video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="header-content">
+        <h1>Steve Schaner</h1>
+        <p>Web Developer</p>
+        <a href="#" class="btn">Contact Me</a>
+      </div>
+    </header>
+
+    <div id="mobile-header">
+      <h1>Steve Schaner</h1>
+      <img class="profile-pic" src="img/profile-picture-square.jpg" alt="Picture of Steve Schaner">
+    </div>
 
 <div class="container">
-
-  <!-- navbar -->
-  <nav class="navbar">
-    <span class="open-slide">
-      <a id="three-bars" href="#">
-        <svg width="30" height="30">
-          <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
-          <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
-          <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
-      </svg>
-      </a>
-    </span>
-
-    <ul class="navbar-nav">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav> <!-- /navbar -->
-
-  <!-- side-menu -->
-  <div id="side-menu" class="side-nav">
-    <a id="btn-close" href="#">&times;</a>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#work">Work</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </div> <!-- /side-menu -->
-
-  <header class="v-header">
-    <div class="fullscreen-video-wrap">
-      <video src="laptop-video.mov" autoplay="true" loop="true"></video>
-    </div>
-    <div class="header-overlay"></div>
-    <div class="header-content">
-      <h1>Steve Schaner</h1>
-      <p>Web Developer</p>
-      <a href="#" class="btn">Contact Me</a>
-    </div>
-  </header>
-
-  <div id="mobile-header">
-    <h1>Steve Schaner</h1>
-    <img class="profile-pic" src="img/profile-picture-square.jpg" alt="Picture of Steve Schaner">
-  </div>
 
   <div id="about" class="section">
     <div id="hi">
@@ -108,37 +110,73 @@
     </div>
   </div>
 
-  <h1>Work</h1>
+
   <div id="work" class="section">
+    <h1 class="section-titles">Work</h1>
+    <div class="work-section-container">
 
-    <div class="work-container">
-      <div class="work-photo">
-        <img src="img/apex-thumbnail.jpg" alt="A lawnmore">
-        <div class="photo-overlay">
-          <h1>Apex</h1>
-          <h3>Outdoor Services</h3>
-          <a href="#" class="btn">See Website</a>
+      <div class="work-container">
+        <div class="work-photo">
+          <img src="img/apex-thumbnail.jpg" alt="A lawnmore">
+          <div class="photo-overlay">
+            <h1>Apex</h1>
+            <h3>Outdoor Services</h3>
+            <a href="#" class="btn">See Website</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="work-container">
-      <div class="work-photo">
-        <img src="img/truth-or-dare-thumbnail.jpg" alt="Looking out onto an ocean">
-        <div class="photo-overlay">
-          <h1>Truth or Dare</h1>
-          <a href="#" class="btn">See Website</a>
+      <div class="work-container">
+        <div class="work-photo">
+          <img src="img/truth-or-dare-thumbnail.jpg" alt="Looking out onto an ocean">
+          <div class="photo-overlay">
+            <h1>Truth or Dare</h1>
+            <a href="#" class="btn">See Website</a>
+          </div>
         </div>
       </div>
+
     </div>
 
   </div>
 
   <div id="skills" class="section">
-    <div>
-      <h1>Skills</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet id optio adipisci sint, pariatur cumque distinctio nisi. Sequi perspiciatis explicabo asperiores blanditiis, impedit deleniti quo fuga expedita. Non voluptate porro eos, atque omnis dolores rem consectetur adipisci sint enim in, perferendis consequuntur. Voluptatem neque sit aperiam quasi modi repellat, aspernatur.</p>
-    </div>
+    <!-- skills (3rd row) -->
+      <h1 class="section-titles">Skills</h1>
+      <p id="skills-subtitle">Hover over the skills to see how much I know.</p>
+      <div id="skillsBars" class="row">
+        <div class="col-md-6">
+          <h3>Front End</h3>
+          <p>HTML5</p>
+          <div class="progress">
+            <div id="htmlBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>CSS3</p>
+          <div class="progress">
+            <div id="cssBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>JavaScript</p>
+          <div class="progress">
+            <div id="javascriptBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+
+        <div class="col-md-6 ">
+          <h3>Personal</h3>
+          <p>Communicaion</p>
+          <div class="progress">
+            <div id="communicationBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Cooperation</p>
+          <div class="progress">
+            <div id="cooperationBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+          <p>Organization</p>
+          <div class="progress">
+            <div id="organizationBar" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div> <!-- /skills -->
   </div>
 
   <div id="contact" class="section">
