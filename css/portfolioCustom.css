@@ -66,6 +66,7 @@ NAVBAR
   z-index:3;
   top: 0;
   width: 100%;
+  display: flex;
 }
 
 .navbar-nav {
@@ -86,6 +87,14 @@ NAVBAR
 .navbar ul {
   margin: 8px 0 0 0;
   list-style: none;
+}
+
+.navbar-contact ul {
+  margin: 0;
+}
+
+.navbar-contact a {
+  padding: 0;
 }
 
 .navbar a:hover {
