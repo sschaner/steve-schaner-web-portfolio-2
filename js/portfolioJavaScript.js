@@ -65,16 +65,16 @@ for (i = 0; i < progressbar.length; i += 1) {
 for (i = 0; i < progressbar.length; i += 1) {
   skillsBars.addEventListener('mouseout', () => {
     progressbar[0].style.width = "0%";
-    progressbar[0].innerHTML = "80%";
+    progressbar[0].innerHTML = "";
     progressbar[1].style.width = "0%";
-    progressbar[1].innerHTML = "75%";
+    progressbar[1].innerHTML = "";
     progressbar[2].style.width = "0%";
-    progressbar[2].innerHTML = "60%";
+    progressbar[2].innerHTML = "";
     progressbar[3].style.width = "0%";
-    progressbar[3].innerHTML = "90%";
+    progressbar[3].innerHTML = "";
     progressbar[4].style.width = "0%";
-    progressbar[4].innerHTML = "90%";
+    progressbar[4].innerHTML = "";
     progressbar[5].style.width = "0%";
-    progressbar[5].innerHTML = "90%";
+    progressbar[5].innerHTML = "";
   })
 }
