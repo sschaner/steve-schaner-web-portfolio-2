@@ -61,7 +61,7 @@ NAVBAR
 .navbar {
   background-color: #225470;
   overflow: hidden;
-  height: 63px;
+  height: 60px;
   position:fixed;
   z-index:3;
   top: 0;
@@ -89,13 +89,32 @@ NAVBAR
   list-style: none;
 }
 
-.navbar-contact ul {
-  margin: 0;
+.navbar-contact-wrapper {
+  display: grid;
+  grid-template-columns: 22px;
+  grid-template-rows: 30px 30px;
+
 }
 
-.navbar-contact a {
+.navbar-contact-wrapper a {
   padding: 0;
 }
+
+.tel-txt,
+.mail-txt {
+  padding-left: 5px;
+  display: none;
+}
+
+.fa-envelope-open,
+.fa-phone-volume {
+  visibility: hidden;
+}
+
+.fa-phone-volume:hover {
+  visibility: visible;
+}
+
 
 .navbar a:hover {
   transition-duration: 1s;
@@ -432,6 +451,18 @@ MEDIA QUERIES
     display: flex;
     justify-content: space-between;
   }
+
+  .navbar-contact-wrapper {
+    display: grid;
+    grid-template-columns: 22px 200px;
+    grid-template-rows: 30px 30px;
+  }
+
+  .tel-txt,
+  .mail-txt {
+    display: inline;
+  }
+
 } /* End min-width: 768px */
 
 @media (max-width: 960px) {
