@@ -22,6 +22,8 @@ const steve = () => {
 
 const progressbar = document.getElementsByClassName('progress-bar');
 
+
+
 /**********************************
 SIDE MENU
 **********************************/
