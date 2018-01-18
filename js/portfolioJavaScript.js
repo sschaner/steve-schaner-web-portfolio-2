@@ -28,7 +28,7 @@ const progressbar = document.getElementsByClassName('progress-bar');
 SIDE MENU
 **********************************/
 
-document.getElementById('three-bars').addEventListener('click', openSideMenu);
+document.getElementById('mobile-menu-button-link').addEventListener('click', openSideMenu);
 document.getElementById('btn-close').addEventListener('click', closeSideMenu);
 
 
