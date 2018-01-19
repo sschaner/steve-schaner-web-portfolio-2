@@ -22,13 +22,14 @@ const steve = () => {
 
 const progressbar = document.getElementsByClassName('progress-bar');
 
+const skillsbar = document.getElementById('skillsBars');
 
 
 /**********************************
 SIDE MENU
 **********************************/
 
-document.getElementById('three-bars').addEventListener('click', openSideMenu);
+document.getElementById('mobile-menu-button-link').addEventListener('click', openSideMenu);
 document.getElementById('btn-close').addEventListener('click', closeSideMenu);
 
 
@@ -42,41 +43,34 @@ document.getElementById('profile-pic-lg-2').addEventListener('mouseout', steve);
 
 
 
-
 /**********************************
 PROGESS BARS
 **********************************/
 
-for (i = 0; i < progressbar.length; i += 1) {
-  skillsBars.addEventListener('mouseover', () => {
-    progressbar[0].style.width = "80%";
-    progressbar[0].innerHTML = "80%";
-    progressbar[1].style.width = "75%";
-    progressbar[1].innerHTML = "75%";
-    progressbar[2].style.width = "60%";
-    progressbar[2].innerHTML = "60%";
-    progressbar[3].style.width = "90%";
-    progressbar[3].innerHTML = "90%";
-    progressbar[4].style.width = "90%";
-    progressbar[4].innerHTML = "90%";
-    progressbar[5].style.width = "90%";
-    progressbar[5].innerHTML = "90%";
-  })
+showSkills = function(index, percentage) {
+  skillsbar.addEventListener('mouseover', () => {
+    progressbar[index].style.width = percentage + "%";
+    progressbar[index].innerHTML = percentage + "%";
+  });
 }
 
-for (i = 0; i < progressbar.length; i += 1) {
-  skillsBars.addEventListener('mouseout', () => {
-    progressbar[0].style.width = "0%";
-    progressbar[0].innerHTML = "";
-    progressbar[1].style.width = "0%";
-    progressbar[1].innerHTML = "";
-    progressbar[2].style.width = "0%";
-    progressbar[2].innerHTML = "";
-    progressbar[3].style.width = "0%";
-    progressbar[3].innerHTML = "";
-    progressbar[4].style.width = "0%";
-    progressbar[4].innerHTML = "";
-    progressbar[5].style.width = "0%";
-    progressbar[5].innerHTML = "";
-  })
+hideSkills = function(index, percentage) {
+  skillsbar.addEventListener('mouseout', () => {
+    progressbar[index].style.width = percentage + "%";
+    progressbar[index].innerHTML = "";
+  });
 }
+
+showSkills(0,80);
+showSkills(1,75);
+showSkills(2,60);
+showSkills(3,90);
+showSkills(4,90);
+showSkills(5,90);
+
+hideSkills(0, 0);
+hideSkills(1, 0);
+hideSkills(2, 0);
+hideSkills(3, 0);
+hideSkills(4, 0);
+hideSkills(5, 0);
