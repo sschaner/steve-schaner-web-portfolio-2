@@ -28,10 +28,12 @@ h3 {
 .container {
   min-width: 100%;
   margin: auto;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
-.section div h1 {
-  text-align: center;
+.section {
+  margin-top: 2rem;
 }
 
 .btn {
@@ -42,6 +44,13 @@ h3 {
   text-decoration: none;
   border-radius: 10px;
   margin-top: 1rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background: #fff;
+  color: #34b3a0;
+  border: 2px solid #34b3a0;
 }
 
 .section-titles {
@@ -70,6 +79,7 @@ NAVBAR
 }
 
 .navbar-nav {
+  display: none;
   flex-direction: row;
 }
 
@@ -236,14 +246,22 @@ ABOUT
   border-radius: 50%;
 }
 
+#profile-pic-lg {
+  display: none;
+}
+
+#mobile-header img {
+  width: 50%;
+}
+
 /**********************************
 WORK
 ***********************************/
 
 #work {
-  color: #fff;
+  max-width: 1300px;
+  margin:auto;
 }
-
 
 .work-photo {
   position: relative;
@@ -264,31 +282,14 @@ WORK
   right: 0;
   bottom: 0;
   left: 0;
-  padding-left: 20px;
-  padding-right: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0, .65);
-  opacity: 0;
+  background: rgba(0,0,0, .55);
+  opacity: 1;
   transition-property: opacity;
   transition-duration: 0.5s;
-}
-
-.work-button {
-  width: 70%;
-  font-weight: 700;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px 0;
-  text-align: center;
-  margin-top: 25px;
-}
-
-.photo-overlay:hover {
-  opacity: 1;
 }
 
 
@@ -329,6 +330,12 @@ SKILLS
     rgba(255,255,255,.15) 0px,
     rgba(255,255,255,.15) 20px
     );
+}
+
+.fi-social-treehouse::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
 }
 
 #htmlBar {
@@ -410,23 +417,13 @@ footer p {
 MEDIA QUERIES
 ***********************************/
 
-@media(max-width: 568px) {
-  .navbar-nav {
-    display: none;
-  }
-
-  #mobile-header img {
-    width: 50%;
-  }
-}
-
 @media(min-width: 568px) {
 
-  .navbar {
-    /* background: none; */
+  .navbar-nav {
+    display: inline-flex;
   }
 
-  .open-slide {
+  .mobile-menu-button {
     display: none;
   }
 
@@ -465,22 +462,12 @@ MEDIA QUERIES
 
 } /* End min-width: 768px */
 
-@media (max-width: 960px) {
-  #profile-pic-lg {
-    display: none;
-  }
-} /* End max-width: 568px  */
 
 @media(min-width: 960px) {
-  .container {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
 
   #about {
     display: flex;
     justify-content: space-between;
-    margin:auto;
   }
 
   #hi,
@@ -489,9 +476,18 @@ MEDIA QUERIES
   }
 
   #profile-pic-lg {
+    display:inline;
     margin: 0 2.5%;
     align-self: flex-start;
     flex: 1;
+  }
+
+  .photo-overlay {
+    opacity: 0;
+  }
+
+  .photo-overlay:hover {
+    opacity: 1;
   }
 
 } /* End min-width: 960px  */

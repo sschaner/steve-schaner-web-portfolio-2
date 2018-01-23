@@ -27,8 +27,6 @@
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 
-
-
     <!-- Used for the Treehouse logo -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/foundation-icons/3.0/foundation-icons.min.css">
 
@@ -46,8 +44,8 @@
 
     <!-- navbar -->
     <nav class="navbar">
-      <span class="open-slide">
-        <a id="three-bars" href="#">
+      <span class="mobile-menu-button">
+        <a id="mobile-menu-button-link" href="#">
           <svg width="30" height="30">
             <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
             <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
@@ -57,7 +55,7 @@
       </span>
 
       <ul class="navbar-nav">
-        <li><a href="#">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -105,12 +103,13 @@
       <div class="header-content">
         <h1>Steve Schaner</h1>
         <p>Web Developer</p>
-        <a href="#" class="btn">Contact Me</a>
+        <button type="button" class="btn" data-toggle="modal" data-target="#contact-form">Contact Me</button>
       </div>
     </header>
 
     <div id="mobile-header">
       <h1>Steve Schaner</h1>
+      <h4>Web Developer</h4>
       <img class="profile-pic" src="img/profile-picture-square.jpg" alt="Picture of Steve Schaner">
     </div>
 
@@ -131,18 +130,17 @@
     </div>
   </div>
 
-
-  <div id="work" class="section">
+    <div id="work" class="section">
     <h1 class="section-titles">Work</h1>
     <div class="work-section-container">
 
       <div class="work-container">
         <div class="work-photo">
-          <img src="img/apex-thumbnail.jpg" alt="A lawnmore">
+          <img src="img/apex-thumbnail.jpg" alt="A lawnmower">
           <div class="photo-overlay">
             <h1>Apex</h1>
             <h3>Outdoor Services</h3>
-            <a href="#" class="btn">See Website</a>
+            <a href="#" class="btn" target="_blank">See Website</a>
           </div>
         </div>
       </div>
@@ -152,7 +150,7 @@
           <img src="img/truth-or-dare-thumbnail.jpg" alt="Looking out onto an ocean">
           <div class="photo-overlay">
             <h1>Truth or Dare</h1>
-            <a href="#" class="btn">See Website</a>
+            <a href="#" class="btn" target="_blank">See Website</a>
           </div>
         </div>
       </div>
@@ -164,8 +162,7 @@
   <div id="skills" class="section">
     <!-- skills (3rd row) -->
       <h1 class="section-titles">Skills</h1>
-      <p id="skills-subtitle">Hover over the skills to see how much I know.</p>
-      <div id="skillsBars" class="row">
+      <div id="skillsBars" class="row revealOnScroll">
         <div class="col-md-6">
           <h3>Front End</h3>
           <p>HTML5</p>
@@ -243,6 +240,30 @@
 
   <p class="copyright">&copy; 2018 Steve Schaner</p>
 </footer> <!-- End footer -->
+
+<!--=====================================
+        FORM MODAL
+       =====================================-->
+
+       <div class="modal fade" id="contact-form" tabindex="-1" role="dialog" aria-labelledby="contact form" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+           <div class="modal-content">
+             <div class="modal-header">
+               <h5 class="modal-title" id="exampleModalLabel">Contact Me Today!</h5>
+               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+               </button>
+             </div>
+             <div class="modal-body">
+               ...
+             </div>
+             <div class="modal-footer">
+               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               <button type="button" class="btn btn-primary">Save changes</button>
+             </div>
+           </div>
+         </div>
+       </div>
 
 
     <!-- Font Awesome All -->
