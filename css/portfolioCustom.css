@@ -246,6 +246,10 @@ ABOUT
   border-radius: 50%;
 }
 
+#super-steve {
+  display:none;
+}
+
 #profile-pic-lg {
   display: none;
 }
@@ -259,8 +263,12 @@ WORK
 ***********************************/
 
 #work {
-  max-width: 1300px;
+  max-width: 95%;
   margin:auto;
+}
+
+.work-container {
+  margin: auto;
 }
 
 .work-photo {
@@ -460,6 +468,11 @@ MEDIA QUERIES
     display: inline;
   }
 
+  .work-photo {
+    width: 85%;
+    margin: auto;
+  }
+
 } /* End min-width: 768px */
 
 
@@ -481,6 +494,11 @@ MEDIA QUERIES
     align-self: flex-start;
     flex: 1;
   }
+
+  /* #profile-pic-lg:hover > #steve {
+    background-color: blue;
+  } */
+
 
   .photo-overlay {
     opacity: 0;
