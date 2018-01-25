@@ -11,15 +11,6 @@ const closeSideMenu = (event) => {
   event.preventDefault()
 };
 
-// const superman = () => {
-//   document.getElementById('steve-heading').innerHTML = "Super Hero";
-//   document.getElementById('profile-pic-lg-2').setAttribute("src", "img/superman.jpg");
-// };
-// const steve = () => {
-//   document.getElementById('steve-heading').innerHTML = "Web Developer";
-//   document.getElementById('profile-pic-lg-2').setAttribute("src", "img/profile-picture-square.jpg")
-// };
-
 const progressbar = document.getElementsByClassName('progress-bar');
 
 const skillsbar = document.getElementById('skillsBars');
@@ -35,22 +26,14 @@ document.getElementById('btn-close').addEventListener('click', closeSideMenu);
 
 
 /**********************************
-SECTON - ABOUT
-**********************************/
-
-// document.getElementById('profile-pic-lg-2').addEventListener('mouseover', superman);
-// document.getElementById('profile-pic-lg-2').addEventListener('mouseout', steve);
-
-
-
-/**********************************
 PROGESS BARS
 **********************************/
 
 progressBarScroll = function() {
-  var ypos = window.pageYOffset;
+  var skillsPos = $('#skills').offset().top;
+  var scrollPos = $(document).scrollTop();
 
-  if(ypos > 1198) {
+  if(scrollPos + 300 > skillsPos) {
     showSkills = function(index, percentage) {
         progressbar[index].style.width = percentage + "%";
         progressbar[index].innerHTML = percentage + "%";

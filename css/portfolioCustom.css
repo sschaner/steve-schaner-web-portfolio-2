@@ -62,6 +62,10 @@ h3 {
   line-height: 1.2;
 }
 
+.transition-time {
+  transition: 1.5s;
+}
+
 
 
 /**********************************
@@ -294,7 +298,7 @@ WORK
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0,0,0, .55);
+  background: rgba(0,0,0, .35);
   opacity: 1;
   transition-property: opacity;
   transition-duration: 0.5s;
@@ -422,9 +426,7 @@ footer p {
   font-size: 1em;
 }
 
-.transition-time {
-  transition: 1.5s;
-}
+
 
 .social a {
   color: #808080;
@@ -522,10 +524,17 @@ MEDIA QUERIES
     flex: 1;
   }
 
-  /* #profile-pic-lg:hover > #steve {
-    background-color: blue;
-  } */
+  #profile-pic-lg:hover > #steve {
+    display: none;
+  }
 
+  #profile-pic-lg:hover > #super-steve {
+    display: block;
+  }
+
+  .photo-overlay {
+    background: rgba(0,0,0, .50);
+  }
 
   .photo-overlay {
     opacity: 0;
