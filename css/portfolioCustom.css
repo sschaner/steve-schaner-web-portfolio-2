@@ -33,7 +33,8 @@ h3 {
 }
 
 .section {
-  margin-top: 2rem;
+  margin: auto;
+  margin-top: 75px;
 }
 
 .btn {
@@ -103,10 +104,10 @@ NAVBAR
   display: grid;
   grid-template-columns: 22px;
   grid-template-rows: 30px 30px;
-
 }
 
-.navbar-contact-wrapper a {
+.navbar-contact-wrapper a,
+.contact-information-wrapper a {
   padding: 0;
 }
 
@@ -264,7 +265,6 @@ WORK
 
 #work {
   max-width: 95%;
-  margin:auto;
 }
 
 .work-container {
@@ -376,11 +376,38 @@ SKILLS
 CONTACT
 ***********************************/
 
-#contact {
-  background: #333;
-  color: #fff;
+#contact-form {
+  margin-bottom: 40px;
 }
 
+#contact h5 {
+  text-align: center;
+}
+
+.contact-information-wrapper {
+  display: grid;
+  grid-template-columns: 40px 200px;
+  grid-template-rows: 50px 50px;
+  align-items: center;
+}
+
+.tel-img,
+.mail-img,
+.contact-information-wrapper a {
+  color: #34b3a0;
+}
+
+.contact-information-wrapper a:hover {
+  color: #225470;
+  text-decoration: none;
+}
+
+.tel-txt-contact,
+.mail-txt-contact {
+  display: inline;
+  font-size: 1.3rem;
+
+}
 
 /**********************************
 FOOTER
