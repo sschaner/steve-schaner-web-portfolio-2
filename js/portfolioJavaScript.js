@@ -29,7 +29,7 @@ document.getElementById('btn-close').addEventListener('click', closeSideMenu);
 PROGESS BARS
 **********************************/
 
-progressBarScroll = function() {
+scroll = function() {
   var skillsPos = $('#skills').offset().top;
   var scrollPos = $(document).scrollTop();
 
@@ -38,25 +38,27 @@ progressBarScroll = function() {
         progressbar[index].style.width = percentage + "%";
         progressbar[index].innerHTML = percentage + "%";
     }
-    showSkills(0,80);
-    showSkills(1,75);
-    showSkills(2,60);
-    showSkills(3,90);
+    showSkills(0,90);
+    showSkills(1,90);
+    showSkills(2,80);
+    showSkills(3,70);
     showSkills(4,90);
     showSkills(5,90);
+    showSkills(6,90);
   }
   else {
     hideSkills = function(index, percentage) {
         progressbar[index].style.width = percentage + "%";
         progressbar[index].innerHTML = "";
     }
-    hideSkills(0, 0);
-    hideSkills(1, 0);
-    hideSkills(2, 0);
-    hideSkills(3, 0);
-    hideSkills(4, 0);
-    hideSkills(5, 0);
+    hideSkills(0,0);
+    hideSkills(1,0);
+    hideSkills(2,0);
+    hideSkills(3,0);
+    hideSkills(4,0);
+    hideSkills(5,0);
+    hideSkills(6,0)
   }
 }
 
-window.addEventListener("scroll", progressBarScroll)
+window.addEventListener("scroll", scroll)
