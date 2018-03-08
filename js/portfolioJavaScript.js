@@ -12,7 +12,6 @@ const closeSideMenu = (event) => {
 };
 
 const progressbar = document.getElementsByClassName('progress-bar');
-
 const skillsbar = document.getElementById('skillsBars');
 
 
